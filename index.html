@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbershop Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Barber Section Code -->
+
+    <div class="container">
+        <h1>Book Your Appointment</h1>
+
+        <label for="barber">Choose a Barber:</label>
+        <select id="barber">
+            <option value="">Select...</option>
+            <option value="Chris">Chris</option>
+            <option value="Robert">Robert</option>
+            <option value="Tyler">Tyler</option>
+        </select>
+
+<!-- Date Section Code -->
+
+        <label for="date">Choose a Date:</label>
+        <input type="date" id="date"/>
+
+<!-- Time Section Code -->
+
+        <label for="time">Available Time Slots:</label>
+        <select id="time">
+            <option value="Select a time..."></option>
+        </select>
+
+        <button onclick="bookAppointment()">Book Appointment</button>
+
+        <p id="confirmation" class="hidden"></p>
+    </div>
+
+<!-- Barber Card Section Code -->
+
+<div id="barber-list" class="barber-list">
+    <div class="barber-card" onclick="selectBarber('Chris')">
+        <img src="/images/pexels-elsimage-3394347.jpg" alt="Chris" />
+        <p>Chris</p>
+    </div>
+    <div class="barber-card" onclick="selectBarber('Robert')">
+        <img src="/images/pexels-teddyjmodel-2955375.jpg" alt="Robert" />
+        <p>Robert</p>
+    </div>
+    <div class="barber-card" onclick="selectBarber('Tyler')">
+        <img src="/images/pexels-olly-3778876.jpg" alt="Tyler" />
+        <p>Tyler</p>
+    </div>
+</div>
+
+<input type="hidden" id="barber" />
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
